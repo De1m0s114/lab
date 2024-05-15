@@ -1,0 +1,5 @@
+# Обмеження доступу до сторінки "Продукти"
+<Files "products.html">
+    Order Allow,Deny
+    Deny from all
+</Files>
