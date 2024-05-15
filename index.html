@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна сторінка</title>
+    <!-- Підключення скрипту reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -22,6 +24,22 @@
     <section>
         <h2>Про нас</h2>
         <p>Тут може бути загальна інформація про ваш бізнес.</p>
+    </section>
+    
+    <section>
+        <h2>Форма зв'язку</h2>
+        <!-- Форма зв'язку з reCAPTCHA -->
+        <form action="submit_form.php" method="post">
+            <label for="name">Ім'я:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Повідомлення:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <!-- reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="6LeUQN0pAAAAAE5wSNwWl97wLHECgfL8UD0e8IO3 "></div><br>
+            <input type="submit" value="Надіслати">
+        </form>
     </section>
 </main>
 
